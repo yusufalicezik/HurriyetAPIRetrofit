@@ -1,13 +1,15 @@
-package com.yusufalicezik.hurriyetapi_retrofit;
+package com.yusufalicezik.hurriyetapi_retrofit.Model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public  class HaberlerData {
+public class HaberDetayData {
 
-
+    @Expose
+    @SerializedName("Writers")
+    private List<String> Writers;
     @Expose
     @SerializedName("Url")
     private String Url;
@@ -15,11 +17,17 @@ public  class HaberlerData {
     @SerializedName("Title")
     private String Title;
     @Expose
+    @SerializedName("Text")
+    private String Text;
+    @Expose
     @SerializedName("Tags")
     private List<String> Tags;
     @Expose
     @SerializedName("StartDate")
     private String StartDate;
+    @Expose
+    @SerializedName("RelatedNews")
+    private List<String> RelatedNews;
     @Expose
     @SerializedName("Path")
     private String Path;
@@ -29,6 +37,9 @@ public  class HaberlerData {
     @Expose
     @SerializedName("Files")
     private List<Files> Files;
+    @Expose
+    @SerializedName("Editor")
+    private String Editor;
     @Expose
     @SerializedName("Description")
     private String Description;
@@ -41,6 +52,14 @@ public  class HaberlerData {
     @Expose
     @SerializedName("Id")
     private String Id;
+
+    public List<String> getWriters() {
+        return Writers;
+    }
+
+    public void setWriters(List<String> Writers) {
+        this.Writers = Writers;
+    }
 
     public String getUrl() {
         return Url;
@@ -58,6 +77,14 @@ public  class HaberlerData {
         this.Title = Title;
     }
 
+    public String getText() {
+        return Text;
+    }
+
+    public void setText(String Text) {
+        this.Text = Text;
+    }
+
     public List<String> getTags() {
         return Tags;
     }
@@ -72,6 +99,14 @@ public  class HaberlerData {
 
     public void setStartDate(String StartDate) {
         this.StartDate = StartDate;
+    }
+
+    public List<String> getRelatedNews() {
+        return RelatedNews;
+    }
+
+    public void setRelatedNews(List<String> RelatedNews) {
+        this.RelatedNews = RelatedNews;
     }
 
     public String getPath() {
@@ -96,6 +131,14 @@ public  class HaberlerData {
 
     public void setFiles(List<Files> Files) {
         this.Files = Files;
+    }
+
+    public String getEditor() {
+        return Editor;
+    }
+
+    public void setEditor(String Editor) {
+        this.Editor = Editor;
     }
 
     public String getDescription() {
